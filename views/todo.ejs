@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>To-DO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<link href="D:\Projects\todo\public\assets\styles.css" rel="stylesheet" type="text/css">
+
+<body>
+
+<script src="/assets/todo-list.js"></script>
+<h1>My App</h1>
+
+<button id="home">HOME</button>
+
+
+<button id="logout">LOGOUT</button>
+<div id="todo-table">
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Range</th>
+        </tr>
+        <%for(var i=0;i<todos.length;i++){%>
+        <tr>
+            <td><%=todos[i].name%></td>
+            <td><%=todos[i].payment%></td>
+            <td><%=todos[i].price%></td>
+            <td><%=todos[i].range%></td>
+            <td><button id=<%=todos[i]._id%> class='req'">BUY</button></td>
+            <!--<%= todos[i]._id%>-->
+        </tr>
+        <%}%>
+    </table>
+</div>
+<button onclick="location.href = 'http://localhost:3000/Dashboard/createAdv';">CREATE ADVERTISEMENT</button>
+</body>
+</html>
